@@ -1,0 +1,21 @@
+name: Windows-CRD
+
+
+on: 
+ 
+  workflow_dispatch:
+    
+    inputs:
+      authcode:
+        description: 'Enter CRD code'
+        required: true
+      pincode:
+         description: ''
+         required: true
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Keep Alive
+      run: ./timeout.ps1
